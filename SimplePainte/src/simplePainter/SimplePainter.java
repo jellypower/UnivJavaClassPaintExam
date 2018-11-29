@@ -10,6 +10,7 @@ public class SimplePainter {
 		frame.setResizable(false);
 		
 		PrimaryPanelView view = new PrimaryPanelView();
+		PrimaryPanelController controller = new PrimaryPanelController(view);
 		frame.getContentPane().add(view);
 		
 		frame.pack();

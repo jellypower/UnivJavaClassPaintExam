@@ -1,5 +1,6 @@
 package simplePainter;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -65,7 +66,16 @@ public class PrimaryPanelView extends JPanel{
 			btnMenuArray[i].setBackground(DrawiConstants.MENU_EXIT[1]);
 			btnMenuArray[i].addMouseListener(hoverL);
 			
+			//btnMenuArray[i].addActionListener(new PrimaryPanelController());
+			
 			menuPanel.add(btnMenuArray[i]);
+		}
+	}
+	
+	public void addMenuListener(ActionListener listener) {
+		
+		for(int i=0;i<6;i++) {
+			btnMenuArray[i].addActionListener(listener);
 		}
 	}
 	
