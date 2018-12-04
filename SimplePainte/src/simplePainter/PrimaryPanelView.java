@@ -11,7 +11,7 @@ public class PrimaryPanelView extends JPanel{
 	
 	private JPanel menuPanel;
 	private JPanel menuOptionPanel, messagePanel,optionPanel;
-	private DrawingPanel drawingPanel;
+	protected DrawingPanel drawingPanel;
 	private HoveringListener hoverL;
 	
 	protected JButton[] btnMenuArray;

@@ -8,19 +8,26 @@ public class PrimaryPanelController {
 	protected PrimaryPanelView view;
 	
 	public PrimaryPanelController(PrimaryPanelView view) {
-		
 		this.view = view;
+		
+		view.addMenuListener(new ButtonMenuListener());
 	}
 	
 	protected class ButtonMenuListener implements ActionListener{
-		protected ButtonMenuListener(ActionEvent event) {
-			
-		}
+		
 
 		@Override
-		public void actionPerformed(ActionEvent arg0) {
+		public void actionPerformed(ActionEvent event) {
 			// TODO Auto-generated method stub
-			
+			Object obj = event.getSource();
+			for(int i=0;i<6;i++){
+
+				if(obj == view.btnMenuArray[i]) {
+					view.drawingPanel.data.nDrawType = i;
+	
+					System.out.println(view.drawingPanel.data.nDrawType);
+				}
+			}
 		}
 	}
 }
